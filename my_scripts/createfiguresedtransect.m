@@ -1,8 +1,8 @@
 function[h_surf,h_surf2,h_contour,h_core1,h_core2,h_annot,axes1,axes2,axes3,axes4] ...
-    = createfiguresedtransect(XData1,XData2,YData1,YData2,CData1,CData2,zdata2, ...
+    = createfiguresedtransect(XData1,XData2,YData1,YData2,CData1,CData2,alphaData,alphaData2,zdata2, ...
     annot_str, title1, units, Cmin,Cmax, colmap, marker_color,...
     xsize,ysize,xmin,xmax,ymin,ymax,zmin,zmax,xunit,yunit,zunit,axisratio,LevelList, ...
-    transect_Y_position,core_X_position,layertext)
+    SedLayer_depth,transect_Y_position,core_X_position,layertext)
 
 figure1 = figure('PaperSize',[30 60],...
     'Color',[1 1 1],...
@@ -70,15 +70,26 @@ h_surf=pcolor(XData1,YData1,CData1);
 shading flat;
 %shading interp;
 
+set(h_surf,'facealpha')
+set(h_surf,'alphadata',alphaData)
+set(h_surf,'FaceAlpha','flat')
+set(h_surf,'AlphaDataMapping','none')
+
 % colorbar
 %colormap(colmap);
 
 % contour
-h_contour=contour(XData1,YData1,zdata2,...
-    'LineColor',[0.48 0.06 0.92],...
+[h_contour,h]=contour(XData1,YData1,zdata2,...
+    'EdgeColor',[0.48 0.06 0.92],...
     'LevelList',LevelList,...
     'Parent',axes1,...
-    'ShowText','off');
+    'ShowText','on', ...
+    'LabelFormat',@mylabelfun, ...
+    'LabelSpacing',300);
+clabel(h_contour,h ...
+    ,'Color',[0.48 0.06 0.92] ...
+    ,'FontSize',5 ...
+    );
 
 yline(transect_Y_position,'Color',marker_color,'LineWidth',1,'LineStyle','--');
 
@@ -138,6 +149,24 @@ if length(units) == 1 % if not fraction use tex iterpreter
 elseif length(units) == 2 % if fraction use latex interpreter
     interpreter = 'latex';
     units_tex = "$$\mathsf{ \left[ \frac{"+units(1)+"}{"+units(2)+"} \right] }$$";
+elseif length(units) == 3
+    if units(3) == "1"
+        if units(1) == "" % if no units
+            interpreter = 'tex';
+            units_tex = "";
+        else
+            interpreter = 'tex';
+            units_tex = "\Delta["+units(1)+"]";
+            % interpreter = 'latex';
+            % units_tex = "$$\mathsf{ \left[ "+units(1)+" \right] }$$";
+        end
+    elseif units(3) == "2"
+        interpreter = 'latex';
+        units_tex = "$$\Delta \mathsf{ \left[ \frac{"+units(1)+"}{"+units(2)+"} \right] }$$";
+    elseif units(3) == "100"
+        interpreter = 'latex';
+        units_tex = "$$\%\Delta$$";
+    end
 end
 annotation(figure1,'textbox',...
     [280/xsize 420/ysize 250/xsize 15/ysize],...
@@ -204,9 +233,15 @@ set(gca, 'XTickLabel', [])
 h_surf2=pcolor(XData2,YData2,CData2);
 shading flat;
 
+set(h_surf2,'facealpha')
+set(h_surf2,'alphadata',alphaData2)
+set(h_surf2,'FaceAlpha','flat')
+set(h_surf2,'AlphaDataMapping','none')
+
 xline(core_X_position,'Color',marker_color,'LineWidth',1,'LineStyle','--');
 text(core_X_position, repelem(-0.6,length(core_X_position)), ["C1" "C2"],"Color",marker_color,"FontSize",12,"HorizontalAlignment","center")
 
+yline(SedLayer_depth,'Color',marker_color,'LineWidth',1,'LineStyle','--');
 
 % if strcmp(xunit,'km')
 %     % xlabel

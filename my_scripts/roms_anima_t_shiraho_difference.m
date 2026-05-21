@@ -7,42 +7,16 @@ clc
 close all
 
 addpath('/Users/yuta/Documents/TiTech/Nakamura_Lab/Simulation/matlab/') 
-% cd '/Users/yuta/Documents/TiTech/Nakamura_Lab/Simulation/matlab/'
 
-% grd='../Data/Shiraho_reef/shiraho_reef_grid16.3.nc'; 
-% 
-% his='../Projects/Shiraho_reef/shiraho_sediment_his';
-% his='/Users/yuta/COAWST_20240307_sediment_production_stable_with_data/Projects/Shiraho_reef/shiraho_sediment_his.nc';
-% 
-% his_qck='/Users/yuta/COAWST/Results/Shiraho_reef/ocean_seagrass_test_qck.nc';
-% his_his='/Users/yuta/COAWST/Results/Shiraho_reef/ocean_seagrass_test_his.nc';
-% 
-% his='/Users/yuta/COAWST/Results/Shiraho_reef/ocean_seagrass_test2_his.nc';
 
-% % -------------- Unconstrained seagrass_straight_roots seagrass ------------------------------
-% grd='/Users/yuta/COAWST/Data/Shiraho_reef/shiraho_reef_grid16_unconstrained_seagrass.nc'; 
-% his_his='/Users/yuta/mount/takagi/SeagrassData/seagrass_straight_roots/ocean_seagrass_unconstrained_01_his.nc';
-% his_qck='/Users/yuta/mount/takagi/SeagrassData/seagrass_straight_roots/ocean_seagrass_unconstrained_01_qck.nc';
-% his_dia='/Users/yuta/mount/takagi/SeagrassData/seagrass_straight_roots/ocean_seagrass_unconstrained_01_dia.nc';
-
-% % -------------- Unconstrained seagrass with SGD ------------------------------
-% grd='/Users/yuta/COAWST/Data/Shiraho_reef/shiraho_reef_grid16_unconstrained_seagrass.nc'; 
-% grd2='/Users/yuta/COAWST/Data/Shiraho_reef/shiraho_reef_grid16.3.nc'; 
-% his_his='/Users/yuta/mount/takagi/SeagrassData/Shiraho_reef_seagrass_unconstrained_low_SGD/ocean_seagrass_unconstrained_low_SGD_01_his.nc';
-% his_qck='/Users/yuta/mount/takagi/SeagrassData/Shiraho_reef_seagrass_unconstrained_low_SGD/ocean_seagrass_unconstrained_low_SGD_01_qck.nc';
-% his_dia='/Users/yuta/mount/takagi/SeagrassData/Shiraho_reef_seagrass_unconstrained_low_SGD/ocean_seagrass_unconstrained_low_SGD_01_dia.nc';
-
-% % % -------------- Seagrass 2025/04/14 ------------------------------
-% grd='/Volumes/syn1/yuta/COAWST_DATA/Yaeyama/Shiraho_reef2/Grid/shiraho_roms_grd_JCOPET_v18.1.nc'; 
-% his_his='/Volumes/syn1/yuta/COAWST_OUTPUT/Yaeyama/Shiraho_reef2_eco/SR_veg_eco2_sg_his_20231001_test_17.nc';
-% his_qck='/Volumes/syn1/yuta/COAWST_OUTPUT/Yaeyama/Shiraho_reef2_eco/SR_veg_eco2_sg_qck_20231001_test_17.nc';
-% his_dia='/Volumes/syn1/yuta/COAWST_OUTPUT/Yaeyama/Shiraho_reef2_eco/SR_veg_eco2_sg_dia_20231001_test_17.nc';
-
-% % -------------- Seagrass 2026/01/22 ------------------------------
+% % -------------- Seagrass 2026/01/28 ------------------------------
 grd='/Users/yuta/COAWST/COAWST_DATA/Yaeyama/Shiraho_reef2/Grid/shiraho_roms_grd_HYCOM_v19.0.nc'; 
 his_his='/Users/yuta/mount/takagi/COAWST_OUTPUT/Yaeyama/Shiraho_reef2/roms/Shiraho_his_20090101.nc';
 his_qck='/Users/yuta/mount/takagi/COAWST_OUTPUT/Yaeyama/Shiraho_reef2/roms/Shiraho_qck_20090101.nc';
 his_dia='/Users/yuta/mount/takagi/COAWST_OUTPUT/Yaeyama/Shiraho_reef2/roms/Shiraho_dia_20090101.nc';
+his_noSG_his='/Users/yuta/mount/takagi/COAWST_OUTPUT/Yaeyama/Shiraho_reef2/roms/Shiraho_no_seagrass_his_20090101.nc';
+his_noSG_qck='/Users/yuta/mount/takagi/COAWST_OUTPUT/Yaeyama/Shiraho_reef2/roms/Shiraho_no_seagrass_qck_20090101.nc';
+his_noSG_dia='/Users/yuta/mount/takagi/COAWST_OUTPUT/Yaeyama/Shiraho_reef2/roms/Shiraho_no_seagrass_dia_20090101.nc';
 
 
 % ncdisp(grd)
@@ -70,21 +44,21 @@ time_annot = true;
     % id = 33; % Coral2 zoox. density
     % id = 34; % Coral2 zoox. density
     % id = 36; % Coral mortality rate
-% id = 40; his=grd; Cbounds=[0 1];     color=colmap7; time_annot=false;    % SGD map
-% id = 41; his=grd; Cbounds=[0 1];     color=colmap7; time_annot=false;    % coral map
-% id = 42; his=grd; Cbounds=[0 1];     color=colmap7; time_annot=false;    % seagrass map
+    % id = 40; his=grd; Cbounds=[0 1];     color=colmap7; time_annot=false;    % SGD map
+    % id = 41; his=grd; Cbounds=[0 1];     color=colmap7; time_annot=false;    % coral map
+    % id = 42; his=grd; Cbounds=[0 1];     color=colmap7; time_annot=false;    % seagrass map
     % id = 201; his=his_his; Cbounds=[400000 600000];   color=colmap6; fix_bottom = true;     % seagrass_SgCBm    400000, 600000, colmap7,
     % id = 202; his=his_dia; Cbounds=[0 1000000];       color=colmap6; fix_bottom = true;     % seagrass_LfCBm    0, 1000000, colmap7
     % id = 203; his=his_dia; Cbounds=[0 1000000];       color=colmap6; fix_bottom = true;     % seagrass_RtCBm    0, 1000000, colmap7
     % id = 204; his=his_dia; Cbounds=[0 1000000];       color=colmap6; fix_bottom = true;     % seagrass_ELAP     0, 1000000
-% id = 205; his=his_his; Cbounds=[0 1];             color=colmap7; fix_bottom = true;     % seagrass_TotSgCBm
+    % id = 205; his=his_his; Cbounds=[0 1];             color=colmap7; fix_bottom = true;     % seagrass_TotSgCBm
     % id = 206; his=his_qck; Cbounds=[0 10];            color=colmap7; fix_bottom = true;     % seagrass_TotLfCBm
     % id = 207; his=his_qck; Cbounds=[0 10];            color=colmap7; fix_bottom = true;     % seagrass_TotRtCBm
     % id = 208; his=his_qck; Cbounds=[0 100];           color=colmap7; fix_bottom = true;     % seagrass_LA
     % id = 221; his=his_his; Cbounds=[0 2];             color=colmap7; fix_bottom = true;     % seagrass_Phot
-% id = 222; his=his_his; Cbounds=[0 4]; alphaMax = 1;  color=colmap6; fix_bottom = true;     % seagrass_Phot_Limiting
+    % id = 222; his=his_his; Cbounds=[0 4]; alphaMax = 1;  color=colmap6; fix_bottom = true;     % seagrass_Phot_Limiting
     % id = 223; his=his_his; Cbounds=[0 1];             color=colmap7; fix_bottom = true;     % seagrass_Resp
-id = 224; his=his_his; Cbounds=[-0.5 0.5];        color=colmap10;fix_bottom = true;     % seagrass_Net_Phot
+    % id = 224; his=his_his; Cbounds=[-0.5 0.5];        color=colmap10;fix_bottom = true;     % seagrass_Net_Phot
     % id = 225; his=his_his; Cbounds=[0 0.01];           color=colmap7; fix_bottom = true;     % seagrass_Dieoff
     % id = 230; his=his_his; Cbounds=[-15 15];        color=colmap10;fix_bottom = true;     % seagrass_Net_Phot
     % id = 1001; % Air temperature

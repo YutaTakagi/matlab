@@ -34,6 +34,11 @@
 # img_dir2='figs_png_0092'
 # img_dir3='figs_png_0093'
 
+# output_dir='figs_png_sediment_SOM_dif'
+# img_dir1='figs_png_perc_dif_0091'
+# img_dir2='figs_png_perc_dif_0092'
+# img_dir3='figs_png_perc_dif_0093'
+
 # output_dir='figs_png_seagrass'
 # img_dir1='figs_png_0205'
 # img_dir2='figs_png_0224'
@@ -45,12 +50,25 @@
 # img_dir3='figs_png_0004'
 # img_dir4='figs_png_0008'
 
-output_dir='figs_png_ocean_CHEMs'
-img_dir1='figs_png_0003'
-img_dir2='figs_png_0005'
-img_dir3='figs_png_0026'
-img_dir4='figs_png_0028'
-img_dir5='figs_png_0029'
+output_dir='figs_png_ocean_physical_dif'
+img_dir1='figs_png_dif_0001'
+img_dir2='figs_png_dif_0002'
+img_dir3='figs_png_dif_0004'
+img_dir4='figs_png_dif_0008'
+
+# output_dir='figs_png_ocean_CHEMs'
+# img_dir1='figs_png_0003'
+# img_dir2='figs_png_0005'
+# img_dir3='figs_png_0026'
+# img_dir4='figs_png_0028'
+# img_dir5='figs_png_0029'
+
+# output_dir='figs_png_ocean_CHEMs_dif'
+# img_dir1='figs_png_perc_dif_0003'
+# img_dir2='figs_png_perc_dif_0005'
+# img_dir3='figs_png_perc_dif_0026'
+# img_dir4='figs_png_perc_dif_0028'
+# img_dir5='figs_png_perc_dif_0029'
 
 # output_dir='figs_png_sediment_CHEMs'
 # img_dir1='figs_png_0054'
@@ -59,6 +77,13 @@ img_dir5='figs_png_0029'
 # img_dir4='figs_png_0063'
 # img_dir5='figs_png_0064'
 
+# output_dir='figs_png_sediment_CHEMs_dif'
+# img_dir1='figs_png_perc_dif_0054'
+# img_dir2='figs_png_perc_dif_0055'
+# img_dir3='figs_png_perc_dif_0062'
+# img_dir4='figs_png_perc_dif_0063'
+# img_dir5='figs_png_perc_dif_0064'
+
 # output_dir='figs_png_ocean_DOM_POM'
 # img_dir1='figs_png_0401'
 # img_dir2='figs_png_0402'
@@ -66,6 +91,16 @@ img_dir5='figs_png_0029'
 # img_dir4='figs_png_0404'
 # img_dir5='figs_png_0405'
 # img_dir6='figs_png_0406'
+# img_dir7='figs_png_0412'
+
+# output_dir='figs_png_ocean_DOM_POM_dif'
+# img_dir1='figs_png_perc_dif_0401'
+# img_dir2='figs_png_perc_dif_0402'
+# img_dir3='figs_png_perc_dif_0403'
+# img_dir4='figs_png_perc_dif_0404'
+# img_dir5='figs_png_perc_dif_0405'
+# img_dir6='figs_png_perc_dif_0406'
+# img_dir7='figs_png_perc_dif_0412'
 
 # output_dir='figs_png_ocean_CHEMs_plankton'
 # img_dir1='figs_png_0003'
@@ -75,7 +110,13 @@ img_dir5='figs_png_0029'
 # img_dir5='figs_png_0410'
 # img_dir6='figs_png_0411'
 
-
+# output_dir='figs_png_ocean_CHEMs_plankton_dif'
+# img_dir1='figs_png_perc_dif_0003'
+# img_dir2='figs_png_perc_dif_0005'
+# img_dir3='figs_png_perc_dif_0027'
+# img_dir4='figs_png_perc_dif_0029'
+# img_dir5='figs_png_perc_dif_0410'
+# img_dir6='figs_png_perc_dif_0411'
 
 
 
@@ -326,6 +367,7 @@ rm cropped_3.png
 rm cropped_4.png
 rm cropped_5.png
 rm cropped_6.png
+rm cropped_7.png
 
 
 crop_position=100
@@ -358,25 +400,32 @@ for f in *.png; do
     cropped_height=$(($height-$crop_position))
     convert ../${img_dir4}/"$f" -gravity North -crop 0x${cropped_height}+0+0 cropped_4.png
 
-    # 5th pic
-    height=`convert ../${img_dir5}/"$f" -ping -format "%h" info:`
-    cropped_height=$(($height-$crop_position))
-    convert ../${img_dir5}/"$f" -gravity North -crop 0x${cropped_height}+0+0 cropped_5.png
+    # # 5th pic
+    # height=`convert ../${img_dir5}/"$f" -ping -format "%h" info:`
+    # cropped_height=$(($height-$crop_position))
+    # convert ../${img_dir5}/"$f" -gravity North -crop 0x${cropped_height}+0+0 cropped_5.png
 
     # # 6th pic
     # height=`convert ../${img_dir6}/"$f" -ping -format "%h" info:`
     # cropped_height=$(($height-$crop_position))
     # convert ../${img_dir6}/"$f" -gravity North -crop 0x${cropped_height}+0+0 cropped_6.png
 
+    # # 7th pic
+    # height=`convert ../${img_dir7}/"$f" -ping -format "%h" info:`
+    # cropped_height=$(($height-$crop_position))
+    # convert ../${img_dir7}/"$f" -gravity North -crop 0x${cropped_height}+0+0 cropped_7.png
+
 
     # Append corresponding file from img_dir2 and write to output_dir
 
     # convert -gravity South \( cropped_1.png cropped_2.png +append \) cropped_time.png -append ../${output_dir}/"$f"
     # convert -gravity South \( cropped_1.png cropped_2.png cropped_3.png +append \) cropped_time.png -append ../${output_dir}/"$f"
-    # convert -gravity South \( cropped_1.png cropped_2.png cropped_3.png cropped_4.png +append \) cropped_time.png -append ../${output_dir}/"$f"
-    convert -gravity South \( cropped_1.png cropped_2.png cropped_3.png cropped_4.png cropped_5.png +append \) cropped_time.png -append ../${output_dir}/"$f"
+    convert -gravity South \( cropped_1.png cropped_2.png cropped_3.png cropped_4.png +append \) cropped_time.png -append ../${output_dir}/"$f"
+    # convert -gravity South \( cropped_1.png cropped_2.png cropped_3.png cropped_4.png cropped_5.png +append \) cropped_time.png -append ../${output_dir}/"$f"
     # convert -gravity South \( cropped_1.png cropped_2.png cropped_3.png cropped_4.png cropped_5.png cropped_6.png +append \) cropped_time.png -append ../${output_dir}/"$f"
+    # convert -gravity South \( cropped_1.png cropped_2.png cropped_3.png cropped_4.png cropped_5.png cropped_6.png cropped_7.png +append \) cropped_time.png -append ../${output_dir}/"$f"
 
+    # break
 done
 
 rm cropped_time.png
@@ -386,5 +435,6 @@ rm cropped_3.png
 rm cropped_4.png
 rm cropped_5.png
 rm cropped_6.png
+rm cropped_7.png
 
 cd ../

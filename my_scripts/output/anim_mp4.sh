@@ -6,18 +6,24 @@
 
 
 
-tag='Shiraho_seagrass_20231007'
+tag='Shiraho_seagrass_200901'
 
 # name='0002'
 
 
 # name='sediment_SOM'
+# name='sediment_SOM_dif'
 # name='seagrass'
 # name='ocean_physical'
-name='ocean_CHEMs'
+name='ocean_physical_dif'
+# name='ocean_CHEMs'
+# name='ocean_CHEMs_dif'
 # name='sediment_CHEMs'
+# name='sediment_CHEMs_dif'
 # name='ocean_DOM_POM'
+# name='ocean_DOM_POM_dif'
 # name='ocean_CHEMs_plankton'
+# name='ocean_CHEMs_plankton_dif'
 
 
 img_dir=figs_png_${name}
@@ -27,7 +33,7 @@ for f in ${img_dir}/*.png; do mv "$f" "$(echo "$f" | sed s/\(JST\)//)"; done
 
 
 
-# echo -n ${img_dir}
+echo -n ${img_dir}
 
 # case ${img_dir} in
 #   'figs_png_0001')

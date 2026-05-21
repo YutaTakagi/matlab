@@ -39,34 +39,34 @@ core_X_position = [0.8 1.4]; % X position along the transect to create vertical 
 
 soil_density = 2.5; % (g/cm3)
 
-% id = 1; his_SG=his_his; his_no=his_noSG_his; Cbounds=[-0.1 0.1];     color=colmap10;    % Temperature
-% id = 2; his_SG=his_his; his_no=his_noSG_his; Cbounds=[-0.1 0.1];     color=colmap10;    % Salinity
-    % id = 3; his_SG=his_his; his_no=his_noSG_his; Cbounds=[-10 10]; color=colmap10;    % DIC
-% id = 4; his_SG=his_his; his_no=his_noSG_his; Cbounds=[-10 10]; color=colmap10;    % TA    Cbounds=[2230 2360]
-    % id = 5; his_SG=his_his; his_no=his_noSG_his; Cbounds=[-30 30];    color=colmap10;    % DO
-id = 8; his_SG=his_dia; his_no=his_noSG_dia; Cbounds=[-0.1 0.1];     color=colmap10;    % pH
+    % id = 1; his_SG=his_his; his_no=his_noSG_his; Cbounds=[-1 1];     color=colmap10;    % Temperature
+    % id = 2; his_SG=his_his; his_no=his_noSG_his; Cbounds=[-1 1];     color=colmap10;    % Salinity
+% id = 3; his_SG=his_his; his_no=his_noSG_his; Cbounds=[-2 2]; color=colmap10; alphaMax=350;   % DIC
+    % id = 4; his_SG=his_his; his_no=his_noSG_his; Cbounds=[-1 1]; color=colmap10;    % TA    Cbounds=[2230 2360]
+% id = 5; his_SG=his_his; his_no=his_noSG_his; Cbounds=[-20 20]; color=colmap10; alphaMax=35;   % DO
+    % id = 8; his_SG=his_dia; his_no=his_noSG_dia; Cbounds=[-0.1 0.1];     color=colmap10;    % pH
     % id = 23; % Phytoplankton1
     % id = 24; % Phytoplankton2
     % id = 25; % Phytoplankton
-    % id = 26; his_SG=his_his; his_no=his_noSG_his; Cbounds=[-10 10]; color=colmap10;    % NO3
-    % id = 27; his_SG=his_his; his_no=his_noSG_his; Cbounds=[-10 10]; color=colmap10;    % NO3+NH4
-    % id = 28; his_SG=his_his; his_no=his_noSG_his; Cbounds=[-10 10]; color=colmap10;    % NH4
-    % id = 29; his_SG=his_his; his_no=his_noSG_his; Cbounds=[-0.3 0.3];  color=colmap10;    % PO4
+% id = 26; his_SG=his_his; his_no=his_noSG_his; Cbounds=[-100 100]; color=colmap10; alphaMax=20;   % NO3
+% id = 27; his_SG=his_his; his_no=his_noSG_his; Cbounds=[-100 100]; color=colmap10; alphaMax=20;    % NO3+NH4
+% id = 28; his_SG=his_his; his_no=his_noSG_his; Cbounds=[-100 100]; color=colmap10; alphaMax=3.5;   % NH4
+% id = 29; his_SG=his_his; his_no=his_noSG_his; Cbounds=[-100 100];  color=colmap10; alphaMax=0.25;   % PO4
     % id = 35; % DOC
     % id = 51; his=his_qck; Cbounds=[0 36];        color=colmap6; fix_bottom=true;    % Sediment Temperature
     % id = 52; his=his_qck; Cbounds=[32 36];        color=colmap6; fix_bottom=true;    % Sediment Salinity
     % id = 53; his=his_qck; Cbounds=[2050 2350];    color=colmap6; fix_bottom=true;    % Sediment TA
-    % id = 54; his_SG=his_qck; his_no=his_noSG_qck; Cbounds=[-10 10]; color=colmap10; fix_bottom=true;    % Sediment DO
-    % id = 55; his_SG=his_qck; his_no=his_noSG_qck; Cbounds=[-10 10]; color=colmap10; fix_bottom=true;    % Sediment DIC
+% id = 54; his_SG=his_qck; his_no=his_noSG_qck; Cbounds=[-20 20]; color=colmap10; fix_bottom=true; alphaMax=3.5;    % Sediment DO
+% id = 55; his_SG=his_qck; his_no=his_noSG_qck; Cbounds=[-1 1]; color=colmap10; fix_bottom=true; alphaMax=500;   % Sediment DIC
     % id = 56; his=his_qck; Cbounds=[0 10]; color=colmap7; fix_bottom=true;    % Sediment N2
     % id = 57; his=his_qck; Cbounds=[25 40]; color=colmap6; fix_bottom=true;    % Sediment DOC Labile          0, 1, colmap7, marker_color, ...
     % id = 58; his=his_qck; Cbounds=[25 40]; color=colmap6; fix_bottom=true;    % Sediment DOC Refractory          0, 2100, colmap6, marker_color, ...
     % id = 59; his=his_qck; Cbounds=[25 40]; color=colmap6; fix_bottom=true;    % Sediment POC Labile          0, 4, colmap7, marker_color, ...
     % id = 60; his=his_qck; Cbounds=[25 40]; color=colmap6; fix_bottom=true;    % Sediment POC Refractory          832000, 852000, colmap6, marker_color, ...
     % id = 61; his=his_qck; Cbounds=[25 40]; color=colmap6; fix_bottom=true;    % Sediment POC Non-degradable          832000, 852000, colmap6, marker_color, ...
-    % id = 62; his_SG=his_qck; his_no=his_noSG_qck; Cbounds=[-2.5 2.5]; color=colmap10; fix_bottom=true;    % Sediment NO3
-    % id = 63; his_SG=his_qck; his_no=his_noSG_qck; Cbounds=[-50 50]; color=colmap10; fix_bottom=true;    % Sediment NH4
-    % id = 64; his_SG=his_qck; his_no=his_noSG_qck; Cbounds=[-5 5]; color=colmap10; fix_bottom=true;    % Sediment PO4         0, 12, colmap7, marker_color, ...
+% id = 62; his_SG=his_qck; his_no=his_noSG_qck; Cbounds=[-100 100]; color=colmap10; fix_bottom=true; alphaMax=3;   % Sediment NO3
+% id = 63; his_SG=his_qck; his_no=his_noSG_qck; Cbounds=[-1000 1000]; color=colmap10; fix_bottom=true; alphaMax=30;   % Sediment NH4
+% id = 64; his_SG=his_qck; his_no=his_noSG_qck; Cbounds=[-100 100]; color=colmap10; fix_bottom=true; alphaMax=3;   % Sediment PO4         0, 12, colmap7, marker_color, ...
     % id = 65; his=his_qck; Cbounds=[25 40]; color=colmap6; fix_bottom=true;    % Sediment DON Labile          0, 1, colmap7, marker_color, ...
     % id = 66; his=his_qck; Cbounds=[25 40]; color=colmap6; fix_bottom=true;    % Sediment DON Refractory          0, 200, colmap7, marker_color, ...
     % id = 67; his=his_qck; Cbounds=[25 40]; color=colmap6; fix_bottom=true;    % Sediment PON Labile          0, 100, colmap7, marker_color, ...
@@ -87,28 +87,28 @@ id = 8; his_SG=his_dia; his_no=his_noSG_dia; Cbounds=[-0.1 0.1];     color=colma
     % id = 82; his=his_qck; Cbounds=[0 40]; color=colmap7; fix_bottom=true;    % Sediment H2S       0, 0.01, colmap7, marker_color, ...
     % id = 83; his=his_qck; Cbounds=[0 40]; color=colmap7; fix_bottom=true;    % Sediment SO4        0, 30000, colmap7, marker_color, ...
     % id = 84; his=his_qck; Cbounds=[25 40]; color=colmap6; fix_bottom=true;    % Sediment S0         0, 30, colmap7, marker_color, ...
-    % id = 91; his_SG=his_qck; his_no=his_noSG_qck; Cbounds=[-1 1]; color=colmap10; fix_bottom=true;    % Sediment sum of OC
-    % id = 92; his_SG=his_qck; his_no=his_noSG_qck; Cbounds=[-0.1 0.1]; color=colmap10; fix_bottom=true;    % Sediment sum of ON
-    % id = 93; his_SG=his_qck; his_no=his_noSG_qck; Cbounds=[-0.01 0.01]; color=colmap10; fix_bottom=true;    % Sediment sum of OP
-    % id = 401; his_SG=his_dia; his_no=his_noSG_dia; Cbounds=[-1 1];  color=colmap10;    % sum of DOC
-    % id = 402; his_SG=his_dia; his_no=his_noSG_dia; Cbounds=[-1 1];  color=colmap10;    % sum of DON
-    % id = 403; his_SG=his_dia; his_no=his_noSG_dia; Cbounds=[-0.1 0.1];  color=colmap10;    % sum of DOP
-    % id = 404; his_SG=his_dia; his_no=his_noSG_dia; Cbounds=[-1 1];  color=colmap10;    % sum of POC
-    % id = 405; his_SG=his_dia; his_no=his_noSG_dia; Cbounds=[-0.1 0.1];  color=colmap10;    % sum of PON
-    % id = 406; his_SG=his_dia; his_no=his_noSG_dia; Cbounds=[-0.01 0.01];  color=colmap10;    % sum of POP
+% id = 91; his_SG=his_qck; his_no=his_noSG_qck; Cbounds=[-1 1]; color=colmap10; fix_bottom=true; alphaMax=7;    % Sediment sum of OC
+% id = 92; his_SG=his_qck; his_no=his_noSG_qck; Cbounds=[-1 1]; color=colmap10; fix_bottom=true;  alphaMax=1;    % Sediment sum of ON
+id = 93; his_SG=his_qck; his_no=his_noSG_qck; Cbounds=[-1 1]; color=colmap10; fix_bottom=true;  alphaMax=0.07;    % Sediment sum of OP
+% id = 401; his_SG=his_dia; his_no=his_noSG_dia; Cbounds=[-1 1];  color=colmap10; alphaMax=1;   % sum of DOC
+% id = 402; his_SG=his_dia; his_no=his_noSG_dia; Cbounds=[-1 1];  color=colmap10; alphaMax=0.15;   % sum of DON
+% id = 403; his_SG=his_dia; his_no=his_noSG_dia; Cbounds=[-1 1];  color=colmap10; alphaMax=0.01;   % sum of DOP
+% id = 404; his_SG=his_dia; his_no=his_noSG_dia; Cbounds=[-10 10];  color=colmap10; alphaMax=0.1;   % sum of POC
+% id = 405; his_SG=his_dia; his_no=his_noSG_dia; Cbounds=[-10 10];  color=colmap10; alphaMax=0.015;   % sum of PON
+% id = 406; his_SG=his_dia; his_no=his_noSG_dia; Cbounds=[-10 10];  color=colmap10; alphaMax=0.001;   % sum of POP
     % id = 407; his=his_his; Cbounds=[0 100];  color=colmap7;    % sum of OC
     % id = 408; his=his_his; Cbounds=[0 10];  color=colmap7;    % sum of ON
     % id = 409; his=his_his; Cbounds=[0 1];  color=colmap7;    % sum of OP
-    % id = 410; his_SG=his_dia; his_no=his_noSG_dia; Cbounds=[-1 1];  color=colmap10;    % sum of phytoplankton
-    % id = 411; his_SG=his_dia; his_no=his_noSG_dia; Cbounds=[-0.1 0.1];  color=colmap10;    % sum of zooplankton
-    % id = 412; his_SG=his_dia; his_no=his_noSG_dia; Cbounds=[-0.1 0.1];  color=colmap10;    % sum of PIC
+% id = 410; his_SG=his_dia; his_no=his_noSG_dia; Cbounds=[-20 20];  color=colmap10; alphaMax=5;   % sum of phytoplankton
+% id = 411; his_SG=his_dia; his_no=his_noSG_dia; Cbounds=[-1 1];  color=colmap10; alphaMax=0.01;   % sum of zooplankton
+% id = 412; his_SG=his_dia; his_no=his_noSG_dia; Cbounds=[-10 10];  color=colmap10; alphaMax=1;   % sum of PIC
     % id = 1001; % Air temperature
     % id = 1002; % Air pressure
     % id = 1003; % Humidity
     % id = 1004; % Rain fall rate
     % id = 1005; % Cloud fraction
 
-output_folder = strcat('figs_png_dif','_',num2str(id,'%0.4u'));
+output_folder = strcat('figs_png_perc_dif','_',num2str(id,'%0.4u'));
 if (exist(strcat('output/', output_folder),'dir'))
     % error(strcat('Output directory /output/',output_folder,' already exists. Program terminated to prevent overwrite.'))
 else
@@ -280,7 +280,6 @@ tmp = zeros(size(x_rho));
 tmp2 = zeros(size(x_rho2));
 tmp_alpha = ones(size(x_rho));
 tmp_alpha2 = ones(size(x_rho2));
-alphaMax = 0.3;
 
 transectYindex = round(size(tmp, 2)*transect_Y_position/ymax);
 coreXindex = round(size(tmp2, 1)*core_X_position/xmax);
@@ -378,23 +377,23 @@ end
 
 if id == 1
     [h_surf,h_surf2,h_contour,h_annot,axes1,axes2]=createfiguretransect(x_rho,x_rho2,y_rho,z_rho,tmp,tmp2,tmp_alpha,tmp_alpha2,h,date_str, ...
-        '\Delta Ocean Temperature',["\circC" "" "1"],Cbounds(1),Cbounds(2),color,marker_color, ...
+        '%\Delta Ocean Temperature',["\circC" "" "100"],Cbounds(1),Cbounds(2),color,marker_color, ...
         xsize,ysize,xmin,xmax,ymin,ymax,zmin,zmax,xunit,yunit,zunit,axisratio,LevelList,transect_Y_position,layertext);
 elseif id == 2
     [h_surf,h_surf2,h_contour,h_annot,axes1,axes2]=createfiguretransect(x_rho,x_rho2,y_rho,z_rho,tmp,tmp2,tmp_alpha,tmp_alpha2,h,date_str, ...
-        '\Delta Ocean Salinity',["PSU" "" "1"],Cbounds(1),Cbounds(2),color,marker_color, ...
+        '%\Delta Ocean Salinity',["PSU" "" "100"],Cbounds(1),Cbounds(2),color,marker_color, ...
         xsize,ysize,xmin,xmax,ymin,ymax,zmin,zmax,xunit,yunit,zunit,axisratio,LevelList,transect_Y_position,layertext);
 elseif id == 3
     [h_surf,h_surf2,h_contour,h_annot,axes1,axes2]=createfiguretransect(x_rho,x_rho2,y_rho,z_rho,tmp,tmp2,tmp_alpha,tmp_alpha2,h,date_str, ...
-        "\Delta Ocean Dissolved Inorganic Carbon"+newline+"(CO_3^{2-} + HCO_3^- + CO_2)",["umol" "kg" "2"],Cbounds(1),Cbounds(2),color,marker_color, ...
+        "%\Delta Ocean Dissolved Inorganic"+newline+"Carbon (CO_3^{2-} + HCO_3^- + CO_2)",["umol" "kg" "100"],Cbounds(1),Cbounds(2),color,marker_color, ...
         xsize,ysize,xmin,xmax,ymin,ymax,zmin,zmax,xunit,yunit,zunit,axisratio,LevelList,transect_Y_position,layertext);
 elseif id == 4
     [h_surf,h_surf2,h_contour,h_annot,axes1,axes2]=createfiguretransect(x_rho,x_rho2,y_rho,z_rho,tmp,tmp2,tmp_alpha,tmp_alpha2,h,date_str, ...
-        '\Delta Ocean Total Alkalinity',["umol" "kg" "2"],Cbounds(1),Cbounds(2),color,marker_color, ...
+        '%\Delta Ocean Total Alkalinity',["umol" "kg" "100"],Cbounds(1),Cbounds(2),color,marker_color, ...
         xsize,ysize,xmin,xmax,ymin,ymax,zmin,zmax,xunit,yunit,zunit,axisratio,LevelList,transect_Y_position,layertext);
 elseif id == 5
     [h_surf,h_surf2,h_contour,h_annot,axes1,axes2]=createfiguretransect(x_rho,x_rho2,y_rho,z_rho,tmp,tmp2,tmp_alpha,tmp_alpha2,h,date_str, ...
-        "\Delta Ocean Dissolved Oxygen"+newline+"(O_2)",["umol" "L" "2"],Cbounds(1),Cbounds(2),color,marker_color, ...
+        "%\Delta Ocean Dissolved Oxygen"+newline+"(O_2)",["" "" "100"],Cbounds(1),Cbounds(2),color,marker_color, ...
         xsize,ysize,xmin,xmax,ymin,ymax,zmin,zmax,xunit,yunit,zunit,axisratio,LevelList,transect_Y_position,layertext);
 % elseif id == 6
 %     [h_surf,h_contour,h_annot]=createfigure5(x_rho,z_sed,tmp,h,date_str, '\delta^{13}C_{DIC} (permil)',-1,2.5,colmap6, xsize,ysize,xmin,xmax,ymin,ymax,unit,LevelList);
@@ -442,19 +441,19 @@ elseif id == 8
 %     [h_surf,h_contour,h_annot]=createfigure5(x_rho,y_rho,tmp,h,date_str,'Phytoplankton (umolC L^-^1) ', 0, 5, colmap6,xsize,ysize,xmin,xmax,ymin,ymax,unit,LevelList);
 elseif id == 26
     [h_surf,h_surf2,h_contour,h_annot,axes1,axes2]=createfiguretransect(x_rho,x_rho2,y_rho,z_rho,tmp,tmp2,tmp_alpha,tmp_alpha2,h,date_str, ...
-        "\Delta Ocean Nitrate"+newline+"(NO_3^-)",["umol" "L" "2"],Cbounds(1),Cbounds(2),color,marker_color, ...
+        "%\Delta Ocean Nitrate"+newline+"(NO_3^-)",["umol" "L" "100"],Cbounds(1),Cbounds(2),color,marker_color, ...
         xsize,ysize,xmin,xmax,ymin,ymax,zmin,zmax,xunit,yunit,zunit,axisratio,LevelList,transect_Y_position,layertext);
 elseif id == 27
     [h_surf,h_surf2,h_contour,h_annot,axes1,axes2]=createfiguretransect(x_rho,x_rho2,y_rho,z_rho,tmp,tmp2,tmp_alpha,tmp_alpha2,h,date_str, ...
-        "\Delta Ocean Nitrogen"+newline+"(NO_3^- + NH_4^+)",["umol" "L" "2"],Cbounds(1),Cbounds(2),color,marker_color, ...
+        "%\Delta Ocean Nitrogen"+newline+"(NO_3^- + NH_4^+)",["umol" "L" "100"],Cbounds(1),Cbounds(2),color,marker_color, ...
         xsize,ysize,xmin,xmax,ymin,ymax,zmin,zmax,xunit,yunit,zunit,axisratio,LevelList,transect_Y_position,layertext);
 elseif id == 28
     [h_surf,h_surf2,h_contour,h_annot,axes1,axes2]=createfiguretransect(x_rho,x_rho2,y_rho,z_rho,tmp,tmp2,tmp_alpha,tmp_alpha2,h,date_str, ...
-        "\Delta Ocean Ammonium"+newline+"(NH_4^+)",["umol" "L" "2"],Cbounds(1),Cbounds(2),color,marker_color, ...
+        "%\Delta Ocean Ammonium"+newline+"(NH_4^+)",["umol" "L" "100"],Cbounds(1),Cbounds(2),color,marker_color, ...
         xsize,ysize,xmin,xmax,ymin,ymax,zmin,zmax,xunit,yunit,zunit,axisratio,LevelList,transect_Y_position,layertext);
 elseif id == 29
     [h_surf,h_surf2,h_contour,h_annot,axes1,axes2]=createfiguretransect(x_rho,x_rho2,y_rho,z_rho,tmp,tmp2,tmp_alpha,tmp_alpha2,h,date_str, ...
-        "\Delta Ocean Phosphate"+newline+"(PO_4^{3-})",["umol" "L" "2"],Cbounds(1),Cbounds(2),color,marker_color, ...
+        "%\Delta Ocean Phosphate"+newline+"(PO_4^{3-})",["umol" "L" "100"],Cbounds(1),Cbounds(2),color,marker_color, ...
         xsize,ysize,xmin,xmax,ymin,ymax,zmin,zmax,xunit,yunit,zunit,axisratio,LevelList,transect_Y_position,layertext);
 % elseif id == 35
 %     [h_surf,h_contour,h_annot]=createfigure5(x_rho,y_rho,tmp,h,date_str, ...
@@ -493,11 +492,11 @@ elseif id == 29
 %         xsize,ysize,xmin,xmax,ymin,ymax,zmin,zmax,xunit,yunit,zunit,axisratio,LevelList,transect_Y_position,core_X_position,sedlayertext);
 elseif id == 54
     [h_surf,h_surf2,h_contour,h_core1,h_core2,h_annot,axes1,axes2,axes3,axes4]=createfiguresedtransect(x_rho,x_rho2,y_rho,z_sed,tmp,tmp2,tmp_alpha,tmp_alpha2,h,date_str, ...
-        "\Delta Sediment Dissolved Oxygen"+newline+"(O_2)",["umol L^{-1}" "" "1"],Cbounds(1),Cbounds(2),color,marker_color, ...
+        "%\Delta Sediment Dissolved Oxygen"+newline+"(O_2)",["umol L^{-1}" "" "100"],Cbounds(1),Cbounds(2),color,marker_color, ...
         xsize,ysize,xmin,xmax,ymin,ymax,zmin,zmax,xunit,yunit,zunit,axisratio,LevelList,SedLayer_depth,transect_Y_position,core_X_position,sedlayertext);
 elseif id == 55
     [h_surf,h_surf2,h_contour,h_core1,h_core2,h_annot,axes1,axes2,axes3,axes4]=createfiguresedtransect(x_rho,x_rho2,y_rho,z_sed,tmp,tmp2,tmp_alpha,tmp_alpha2,h,date_str, ...
-        "\Delta Sediment Dissolved Inorganic Carbon"+newline+"(CO_3^{2-} + HCO_3^- + CO_2)",["umol L^{-1}" "" "1"],Cbounds(1),Cbounds(2),color,marker_color, ...
+        "%\Delta Sediment Dissolved Inorganic Carbon"+newline+"(CO_3^{2-} + HCO_3^- + CO_2)",["umol L^{-1}" "" "100"],Cbounds(1),Cbounds(2),color,marker_color, ...
         xsize,ysize,xmin,xmax,ymin,ymax,zmin,zmax,xunit,yunit,zunit,axisratio,LevelList,SedLayer_depth,transect_Y_position,core_X_position,sedlayertext);
 % elseif id == 56
 %     [h_surf,h_surf2,h_contour,h_core1,h_core2,h_annot,axes1,axes2,axes3,axes4]=createfiguresedtransect(x_rho,x_rho2,y_rho,z_sed,tmp,tmp2,tmp_alpha,tmp_alpha2,h,date_str, ...
@@ -525,15 +524,15 @@ elseif id == 55
 %         xsize,ysize,xmin,xmax,ymin,ymax,zmin,zmax,xunit,yunit,zunit,axisratio,LevelList,transect_Y_position,core_X_position,sedlayertext);
 elseif id == 62
     [h_surf,h_surf2,h_contour,h_core1,h_core2,h_annot,axes1,axes2,axes3,axes4]=createfiguresedtransect(x_rho,x_rho2,y_rho,z_sed,tmp,tmp2,tmp_alpha,tmp_alpha2,h,date_str, ...
-        "\Delta Sediment Nitrate"+newline+"(NO_3^-)",["umol L^{-1}" "" "1"],Cbounds(1),Cbounds(2),color,marker_color, ...
+        "%\Delta Sediment Nitrate"+newline+"(NO_3^-)",["umol L^{-1}" "" "100"],Cbounds(1),Cbounds(2),color,marker_color, ...
         xsize,ysize,xmin,xmax,ymin,ymax,zmin,zmax,xunit,yunit,zunit,axisratio,LevelList,SedLayer_depth,transect_Y_position,core_X_position,sedlayertext);
 elseif id == 63
     [h_surf,h_surf2,h_contour,h_core1,h_core2,h_annot,axes1,axes2,axes3,axes4]=createfiguresedtransect(x_rho,x_rho2,y_rho,z_sed,tmp,tmp2,tmp_alpha,tmp_alpha2,h,date_str, ...
-        "\Delta Sediment Ammonium"+newline+"(NH_4^+)",["umol L^{-1}" "" "1"],Cbounds(1),Cbounds(2),color,marker_color, ...
+        "%\Delta Sediment Ammonium"+newline+"(NH_4^+)",["umol L^{-1}" "" "100"],Cbounds(1),Cbounds(2),color,marker_color, ...
         xsize,ysize,xmin,xmax,ymin,ymax,zmin,zmax,xunit,yunit,zunit,axisratio,LevelList,SedLayer_depth,transect_Y_position,core_X_position,sedlayertext);
 elseif id == 64
     [h_surf,h_surf2,h_contour,h_core1,h_core2,h_annot,axes1,axes2,axes3,axes4]=createfiguresedtransect(x_rho,x_rho2,y_rho,z_sed,tmp,tmp2,tmp_alpha,tmp_alpha2,h,date_str, ...
-        "\Delta Sediment Phosphate"+newline+"(PO_4^{3-})",["umol L^{-1}" "" "1"],Cbounds(1),Cbounds(2),color,marker_color, ...
+        "%\Delta Sediment Phosphate"+newline+"(PO_4^{3-})",["umol L^{-1}" "" "100"],Cbounds(1),Cbounds(2),color,marker_color, ...
         xsize,ysize,xmin,xmax,ymin,ymax,zmin,zmax,xunit,yunit,zunit,axisratio,LevelList,SedLayer_depth,transect_Y_position,core_X_position,sedlayertext);
 % elseif id == 65
 %     [h_surf,h_surf2,h_contour,h_core1,h_core2,h_annot,axes1,axes2,axes3,axes4]=createfiguresedtransect(x_rho,x_rho2,y_rho,z_sed,tmp,tmp2,tmp_alpha,tmp_alpha2,h,date_str, ...
@@ -617,39 +616,39 @@ elseif id == 64
 %         xsize,ysize,xmin,xmax,ymin,ymax,zmin,zmax,xunit,yunit,zunit,axisratio,LevelList,transect_Y_position,core_X_position,sedlayertext);
 elseif id == 91
     [h_surf,h_surf2,h_contour,h_core1,h_core2,h_annot,axes1,axes2,axes3,axes4]=createfiguresedtransect(x_rho,x_rho2,y_rho,z_sed,tmp,tmp2,tmp_alpha,tmp_alpha2,h,date_str, ...
-        '\Delta Sediment Organic Carbon',["mol L^{-1}" "" "1"],Cbounds(1),Cbounds(2),color,marker_color, ...
+        '%\Delta Sediment Organic Carbon',["mol L^{-1}" "" "100"],Cbounds(1),Cbounds(2),color,marker_color, ...
         xsize,ysize,xmin,xmax,ymin,ymax,zmin,zmax,xunit,yunit,zunit,axisratio,LevelList,SedLayer_depth,transect_Y_position,core_X_position,sedlayertext);
 elseif id == 92
     [h_surf,h_surf2,h_contour,h_core1,h_core2,h_annot,axes1,axes2,axes3,axes4]=createfiguresedtransect(x_rho,x_rho2,y_rho,z_sed,tmp,tmp2,tmp_alpha,tmp_alpha2,h,date_str, ...
-        '\Delta Sediment Organic Nitrogen',["mol L^{-1}" "" "1"],Cbounds(1),Cbounds(2),color,marker_color, ...
+        '%\Delta Sediment Organic Nitrogen',["mol L^{-1}" "" "100"],Cbounds(1),Cbounds(2),color,marker_color, ...
         xsize,ysize,xmin,xmax,ymin,ymax,zmin,zmax,xunit,yunit,zunit,axisratio,LevelList,SedLayer_depth,transect_Y_position,core_X_position,sedlayertext);
 elseif id == 93
     [h_surf,h_surf2,h_contour,h_core1,h_core2,h_annot,axes1,axes2,axes3,axes4]=createfiguresedtransect(x_rho,x_rho2,y_rho,z_sed,tmp,tmp2,tmp_alpha,tmp_alpha2,h,date_str, ...
-        '\Delta Sediment Organic Phosphorus',["mol L^{-1}" "" "1"],Cbounds(1),Cbounds(2),color,marker_color, ...
+        '%\Delta Sediment Organic Phosphorus',["mol L^{-1}" "" "100"],Cbounds(1),Cbounds(2),color,marker_color, ...
         xsize,ysize,xmin,xmax,ymin,ymax,zmin,zmax,xunit,yunit,zunit,axisratio,LevelList,SedLayer_depth,transect_Y_position,core_X_position,sedlayertext);
 elseif id == 401 % sum of DOC
     [h_surf,h_surf2,h_contour,h_annot,axes1,axes2]=createfiguretransect(x_rho,x_rho2,y_rho,z_rho,tmp,tmp2,tmp_alpha,tmp_alpha2,h,date_str, ...
-        "\Delta Dissolved Organic Carbon",["umol" "L" "2"],Cbounds(1),Cbounds(2),color,marker_color, ...
+        "%\Delta Dissolved Organic Carbon",["umol" "L" "100"],Cbounds(1),Cbounds(2),color,marker_color, ...
         xsize,ysize,xmin,xmax,ymin,ymax,zmin,zmax,xunit,yunit,zunit,axisratio,LevelList,transect_Y_position,layertext);
 elseif id == 402 % sum of DON
     [h_surf,h_surf2,h_contour,h_annot,axes1,axes2]=createfiguretransect(x_rho,x_rho2,y_rho,z_rho,tmp,tmp2,tmp_alpha,tmp_alpha2,h,date_str, ...
-        "\Delta Dissolved Organic Nitrogen",["umol" "L" "2"],Cbounds(1),Cbounds(2),color,marker_color, ...
+        "%\Delta Dissolved Organic Nitrogen",["umol" "L" "100"],Cbounds(1),Cbounds(2),color,marker_color, ...
         xsize,ysize,xmin,xmax,ymin,ymax,zmin,zmax,xunit,yunit,zunit,axisratio,LevelList,transect_Y_position,layertext);
 elseif id == 403 % sum of DOP
     [h_surf,h_surf2,h_contour,h_annot,axes1,axes2]=createfiguretransect(x_rho,x_rho2,y_rho,z_rho,tmp,tmp2,tmp_alpha,tmp_alpha2,h,date_str, ...
-        "\Delta Dissolved Organic Phosphorus",["umol" "L" "2"],Cbounds(1),Cbounds(2),color,marker_color, ...
+        "%\Delta Dissolved Organic Phosphorus",["umol" "L" "100"],Cbounds(1),Cbounds(2),color,marker_color, ...
         xsize,ysize,xmin,xmax,ymin,ymax,zmin,zmax,xunit,yunit,zunit,axisratio,LevelList,transect_Y_position,layertext);
 elseif id == 404 % sum of POC
     [h_surf,h_surf2,h_contour,h_annot,axes1,axes2]=createfiguretransect(x_rho,x_rho2,y_rho,z_rho,tmp,tmp2,tmp_alpha,tmp_alpha2,h,date_str, ...
-        "\Delta Particulate Organic Carbon",["umol" "L" "2"],Cbounds(1),Cbounds(2),color,marker_color, ...
+        "%\Delta Particulate Organic Carbon",["umol" "L" "100"],Cbounds(1),Cbounds(2),color,marker_color, ...
         xsize,ysize,xmin,xmax,ymin,ymax,zmin,zmax,xunit,yunit,zunit,axisratio,LevelList,transect_Y_position,layertext);
 elseif id == 405 % sum of PON
     [h_surf,h_surf2,h_contour,h_annot,axes1,axes2]=createfiguretransect(x_rho,x_rho2,y_rho,z_rho,tmp,tmp2,tmp_alpha,tmp_alpha2,h,date_str, ...
-        "\Delta Particulate Organic Nitrogen",["umol" "L" "2"],Cbounds(1),Cbounds(2),color,marker_color, ...
+        "%\Delta Particulate Organic Nitrogen",["umol" "L" "100"],Cbounds(1),Cbounds(2),color,marker_color, ...
         xsize,ysize,xmin,xmax,ymin,ymax,zmin,zmax,xunit,yunit,zunit,axisratio,LevelList,transect_Y_position,layertext);
 elseif id == 406 % sum of POP
     [h_surf,h_surf2,h_contour,h_annot,axes1,axes2]=createfiguretransect(x_rho,x_rho2,y_rho,z_rho,tmp,tmp2,tmp_alpha,tmp_alpha2,h,date_str, ...
-        "\Delta Particulate Organic Phosphorus",["umol" "L" "2"],Cbounds(1),Cbounds(2),color,marker_color, ...
+        "%\Delta Particulate Organic Phosphorus",["umol" "L" "100"],Cbounds(1),Cbounds(2),color,marker_color, ...
         xsize,ysize,xmin,xmax,ymin,ymax,zmin,zmax,xunit,yunit,zunit,axisratio,LevelList,transect_Y_position,layertext);
 % elseif id == 407 % sum of OC
 %     [h_surf,h_surf2,h_contour,h_annot,axes1,axes2]=createfiguretransect(x_rho,x_rho2,y_rho,z_rho,tmp,tmp2,h,date_str, ...
@@ -665,15 +664,15 @@ elseif id == 406 % sum of POP
 %         xsize,ysize,xmin,xmax,ymin,ymax,zmin,zmax,xunit,yunit,zunit,axisratio,LevelList,transect_Y_position,layertext);
 elseif id == 410 % sum of phytoplankton
     [h_surf,h_surf2,h_contour,h_annot,axes1,axes2]=createfiguretransect(x_rho,x_rho2,y_rho,z_rho,tmp,tmp2,tmp_alpha,tmp_alpha2,h,date_str, ...
-        "\Delta Phytoplankton"+newline+"Carbon-biomass",["umol" "L" "2"],Cbounds(1),Cbounds(2),color,marker_color, ...
+        "%\Delta Phytoplankton"+newline+"Carbon-biomass",["umol" "L" "100"],Cbounds(1),Cbounds(2),color,marker_color, ...
         xsize,ysize,xmin,xmax,ymin,ymax,zmin,zmax,xunit,yunit,zunit,axisratio,LevelList,transect_Y_position,layertext);
 elseif id == 411 % sum of zooplankton
     [h_surf,h_surf2,h_contour,h_annot,axes1,axes2]=createfiguretransect(x_rho,x_rho2,y_rho,z_rho,tmp,tmp2,tmp_alpha,tmp_alpha2,h,date_str, ...
-        "\Delta Zooplankton"+newline+"Carbon-biomass",["umol" "L" "2"],Cbounds(1),Cbounds(2),color,marker_color, ...
+        "%\Delta Zooplankton"+newline+"Carbon-biomass",["umol" "L" "100"],Cbounds(1),Cbounds(2),color,marker_color, ...
         xsize,ysize,xmin,xmax,ymin,ymax,zmin,zmax,xunit,yunit,zunit,axisratio,LevelList,transect_Y_position,layertext);
 elseif id == 412 % sum of PIC
     [h_surf,h_surf2,h_contour,h_annot,axes1,axes2]=createfiguretransect(x_rho,x_rho2,y_rho,z_rho,tmp,tmp2,tmp_alpha,tmp_alpha2,h,date_str, ...
-        "\Delta Particulate Inorganic Carbon",["umol" "L" "2"],Cbounds(1),Cbounds(2),color,marker_color, ...
+        "%\Delta Particulate Inorganic Carbon",["umol" "L" "100"],Cbounds(1),Cbounds(2),color,marker_color, ...
         xsize,ysize,xmin,xmax,ymin,ymax,zmin,zmax,xunit,yunit,zunit,axisratio,LevelList,transect_Y_position,layertext);
 % elseif id == 1001
 %     [h_surf,h_contour,h_annot]=createfigure5(x_rho,y_rho,tmp,h,date_str,'Air temperature (^oC)', 25, 33, colmap6,xsize,ysize,xmin,xmax,ymin,ymax,unit,LevelList);
@@ -690,16 +689,19 @@ drawnow
 %set(figure(1),'OuterPosition',[0 0 320 700])%[0 0 400 800]%[0 0 290 620]
 
 % alpha for sediment layer
-tmp_alpha = ncread(grd,'p_sand',[1 1],[Inf Inf]); 
-% tmp_alpha = tmp_alpha > 0;
-tmp_alpha = tmp_alpha ./ alphaMax;
-tmp_alpha(tmp_alpha > 1) = 1;
-tmp_alpha2 = squeeze(ncread(grd,'p_sand',[1 transectYindex],[Inf 1])); 
-tmp_alpha2 = repmat(tmp_alpha2,1,size(tmp2,2));
-% tmp_alpha2 = tmp_alpha2 > 0;
-tmp_alpha2 = tmp_alpha2 ./ alphaMax;
-tmp_alpha2(tmp_alpha2 > 1) = 1;
+if id > 50 && id < 100
+    SedAlphaMax = 1;
 
+    sed_tmp_alpha = ncread(grd,'p_sand',[1 1],[Inf Inf]); 
+    % sed_tmp_alpha = sed_tmp_alpha > 0;
+    sed_tmp_alpha = sed_tmp_alpha ./ SedAlphaMax;
+    sed_tmp_alpha(sed_tmp_alpha > 1) = 1;
+    sed_tmp_alpha2 = squeeze(ncread(grd,'p_sand',[1 transectYindex],[Inf 1])); 
+    sed_tmp_alpha2 = repmat(sed_tmp_alpha2,1,size(tmp2,2));
+    % sed_tmp_alpha2 = sed_tmp_alpha2 > 0;
+    sed_tmp_alpha2 = sed_tmp_alpha2 ./ SedAlphaMax;
+    sed_tmp_alpha2(sed_tmp_alpha2 > 1) = 1;
+end
 
 % for i=1100:3:1100
 % for i=imax:1:imax
@@ -738,16 +740,22 @@ for i=1:1:imax
         tmp_no = ncread(his_no,'DIC_01',[1 1 plotZ i],[Inf Inf 1 1]);
         tmp2_SG =  squeeze(ncread(his_SG,'DIC_01',[1 transectYindex 1 i],[Inf 1 Inf 1]));
         tmp2_no =  squeeze(ncread(his_no,'DIC_01',[1 transectYindex 1 i],[Inf 1 Inf 1]));
+        tmp_alpha = max(tmp_SG, tmp_no) ./ alphaMax;
+        tmp_alpha2 = max(tmp2_SG, tmp2_no) ./ alphaMax;
     elseif id == 4
         tmp_SG = ncread(his_SG,'TA',[1 1 plotZ i],[Inf Inf 1 1]) ;
         tmp_no = ncread(his_no,'TA',[1 1 plotZ i],[Inf Inf 1 1]) ;
         tmp2_SG =  squeeze(ncread(his_SG,'TA',[1 transectYindex 1 i],[Inf 1 Inf 1]));
         tmp2_no =  squeeze(ncread(his_no,'TA',[1 transectYindex 1 i],[Inf 1 Inf 1]));
+        tmp_alpha = max(tmp_SG, tmp_no) ./ alphaMax;
+        tmp_alpha2 = max(tmp2_SG, tmp2_no) ./ alphaMax;
     elseif id == 5
         tmp_SG = ncread(his_SG,'DO',[1 1 plotZ i],[Inf Inf 1 1]);
         tmp_no = ncread(his_no,'DO',[1 1 plotZ i],[Inf Inf 1 1]);
         tmp2_SG =  squeeze(ncread(his_SG,'DO',[1 transectYindex 1 i],[Inf 1 Inf 1]));
         tmp2_no =  squeeze(ncread(his_no,'DO',[1 transectYindex 1 i],[Inf 1 Inf 1]));
+        tmp_alpha = max(tmp_SG, tmp_no) ./ alphaMax;
+        tmp_alpha2 = max(tmp2_SG, tmp2_no) ./ alphaMax;
     % elseif id == 6
     %     tmp = ncread(his,'d13C_DIC',[1 1 plotZ i],[Inf Inf 1 1]);
     % elseif id == 7
@@ -798,6 +806,8 @@ for i=1:1:imax
         tmp_no = ncread(his_no,'NO3_01',[1 1 plotZ i],[Inf Inf 1 1]) ;
         tmp2_SG =  squeeze(ncread(his_SG,'NO3_01',[1 transectYindex 1 i],[Inf 1 Inf 1]));
         tmp2_no =  squeeze(ncread(his_no,'NO3_01',[1 transectYindex 1 i],[Inf 1 Inf 1]));
+        tmp_alpha = max(tmp_SG, tmp_no) ./ alphaMax;
+        tmp_alpha2 = max(tmp2_SG, tmp2_no) ./ alphaMax;
     elseif id == 27
         tmp_SG = ncread(his_SG,'NO3_01',[1 1 plotZ i],[Inf Inf 1 1]) ...
             + ncread(his_SG,'NH4_01',[1 1 plotZ i],[Inf Inf 1 1]);
@@ -807,16 +817,22 @@ for i=1:1:imax
              +  squeeze(ncread(his_SG,'NH4_01',[1 transectYindex 1 i],[Inf 1 Inf 1]));
         tmp2_no =  squeeze(ncread(his_no,'NO3_01',[1 transectYindex 1 i],[Inf 1 Inf 1])) ...
              +  squeeze(ncread(his_no,'NH4_01',[1 transectYindex 1 i],[Inf 1 Inf 1]));
+        tmp_alpha = max(tmp_SG, tmp_no) ./ alphaMax;
+        tmp_alpha2 = max(tmp2_SG, tmp2_no) ./ alphaMax;
     elseif id == 28
         tmp_SG = ncread(his_SG,'NH4_01',[1 1 plotZ i],[Inf Inf 1 1]) ;
         tmp_no = ncread(his_no,'NH4_01',[1 1 plotZ i],[Inf Inf 1 1]) ;
         tmp2_SG =  squeeze(ncread(his_SG,'NH4_01',[1 transectYindex 1 i],[Inf 1 Inf 1]));
         tmp2_no =  squeeze(ncread(his_no,'NH4_01',[1 transectYindex 1 i],[Inf 1 Inf 1]));
+        tmp_alpha = max(tmp_SG, tmp_no) ./ alphaMax;
+        tmp_alpha2 = max(tmp2_SG, tmp2_no) ./ alphaMax;
     elseif id == 29
         tmp_SG = ncread(his_SG,'PO4_01',[1 1 plotZ i],[Inf Inf 1 1]) ;
         tmp_no = ncread(his_no,'PO4_01',[1 1 plotZ i],[Inf Inf 1 1]) ;
         tmp2_SG =  squeeze(ncread(his_SG,'PO4_01',[1 transectYindex 1 i],[Inf 1 Inf 1]));
         tmp2_no =  squeeze(ncread(his_no,'PO4_01',[1 transectYindex 1 i],[Inf 1 Inf 1]));
+        tmp_alpha = max(tmp_SG, tmp_no) ./ alphaMax;
+        tmp_alpha2 = max(tmp2_SG, tmp2_no) ./ alphaMax;
     % elseif id == 35
     %     tmp = ncread(his,'DOC',[1 1 plotZ i],[Inf Inf 1 1]) ;
     % elseif id == 30
@@ -870,11 +886,15 @@ for i=1:1:imax
         tmp_no =  ncread(his_no,'sediment_O2',[1 1 SedLayer i],[Inf Inf 1 1]);
         tmp2_SG =  squeeze(ncread(his_SG,'sediment_O2',[1 transectYindex 1 i],[Inf 1 Inf 1]));
         tmp2_no =  squeeze(ncread(his_no,'sediment_O2',[1 transectYindex 1 i],[Inf 1 Inf 1]));
+        tmp_alpha = sed_tmp_alpha .* max(tmp_SG, tmp_no) ./ alphaMax;
+        tmp_alpha2 = sed_tmp_alpha2 .* max(tmp2_SG, tmp2_no) ./ alphaMax;
     elseif id == 55
         tmp_SG =  ncread(his_SG,'sediment_DIC_01',[1 1 SedLayer i],[Inf Inf 1 1]);
         tmp_no =  ncread(his_no,'sediment_DIC_01',[1 1 SedLayer i],[Inf Inf 1 1]);
         tmp2_SG =  squeeze(ncread(his_SG,'sediment_DIC_01',[1 transectYindex 1 i],[Inf 1 Inf 1]));
         tmp2_no =  squeeze(ncread(his_no,'sediment_DIC_01',[1 transectYindex 1 i],[Inf 1 Inf 1]));
+        tmp_alpha = sed_tmp_alpha .* max(tmp_SG, tmp_no) ./ alphaMax;
+        tmp_alpha2 = sed_tmp_alpha2 .* max(tmp2_SG, tmp2_no) ./ alphaMax;
     % elseif id == 56
     %     tmp =  ncread(his,'sediment_N2',[1 1 SedLayer i],[Inf Inf 1 1]);
     %     tmp2 =  squeeze(ncread(his,'sediment_N2',[1 transectYindex 1 i],[Inf 1 Inf 1]));
@@ -898,16 +918,22 @@ for i=1:1:imax
         tmp_no =  ncread(his_no,'sediment_NO3_01',[1 1 SedLayer i],[Inf Inf 1 1]);
         tmp2_SG =  squeeze(ncread(his_SG,'sediment_NO3_01',[1 transectYindex 1 i],[Inf 1 Inf 1]));
         tmp2_no =  squeeze(ncread(his_no,'sediment_NO3_01',[1 transectYindex 1 i],[Inf 1 Inf 1]));
+        tmp_alpha = sed_tmp_alpha .* max(tmp_SG, tmp_no) ./ alphaMax;
+        tmp_alpha2 = sed_tmp_alpha2 .* max(tmp2_SG, tmp2_no) ./ alphaMax;
     elseif id == 63
         tmp_SG =  ncread(his_SG,'sediment_NH4_01',[1 1 SedLayer i],[Inf Inf 1 1]);
         tmp_no =  ncread(his_no,'sediment_NH4_01',[1 1 SedLayer i],[Inf Inf 1 1]);
         tmp2_SG =  squeeze(ncread(his_SG,'sediment_NH4_01',[1 transectYindex 1 i],[Inf 1 Inf 1]));
         tmp2_no =  squeeze(ncread(his_no,'sediment_NH4_01',[1 transectYindex 1 i],[Inf 1 Inf 1]));
+        tmp_alpha = sed_tmp_alpha .* max(tmp_SG, tmp_no) ./ alphaMax;
+        tmp_alpha2 = sed_tmp_alpha2 .* max(tmp2_SG, tmp2_no) ./ alphaMax;
     elseif id == 64
         tmp_SG =  ncread(his_SG,'sediment_PO4_01',[1 1 SedLayer i],[Inf Inf 1 1]);
         tmp_no =  ncread(his_no,'sediment_PO4_01',[1 1 SedLayer i],[Inf Inf 1 1]);
         tmp2_SG =  squeeze(ncread(his_SG,'sediment_PO4_01',[1 transectYindex 1 i],[Inf 1 Inf 1]));
         tmp2_no =  squeeze(ncread(his_no,'sediment_PO4_01',[1 transectYindex 1 i],[Inf 1 Inf 1]));
+        tmp_alpha = sed_tmp_alpha .* max(tmp_SG, tmp_no) ./ alphaMax;
+        tmp_alpha2 = sed_tmp_alpha2 .* max(tmp2_SG, tmp2_no) ./ alphaMax;
     % elseif id == 65
     %     tmp =  ncread(his,'sediment_DON01_01',[1 1 SedLayer i],[Inf Inf 1 1]);
     %     tmp2 =  squeeze(ncread(his,'sediment_DON01_01',[1 transectYindex 1 i],[Inf 1 Inf 1]));
@@ -993,6 +1019,8 @@ for i=1:1:imax
         tmp_no = tmp_no ./ 1000000; % umol L-1 -> mol L-1
         tmp2_SG = tmp2_SG ./ 1000000; % umol L-1 -> mol L-1
         tmp2_no = tmp2_no ./ 1000000; % umol L-1 -> mol L-1
+        tmp_alpha = sed_tmp_alpha .* max(tmp_SG, tmp_no) ./ alphaMax;
+        tmp_alpha2 = sed_tmp_alpha2 .* max(tmp2_SG, tmp2_no) ./ alphaMax;
     elseif id == 92 % sum sediment of ON
         tmp_SG =  ncread(his_SG,'sediment_DON01_01',[1 1 SedLayer i],[Inf Inf 1 1])...
              + ncread(his_SG,'sediment_DON02_01',[1 1 SedLayer i],[Inf Inf 1 1])...
@@ -1018,6 +1046,8 @@ for i=1:1:imax
         tmp_no = tmp_no ./ 1000000; % umol L-1 -> mol L-1
         tmp2_SG = tmp2_SG ./ 1000000; % umol L-1 -> mol L-1
         tmp2_no = tmp2_no ./ 1000000; % umol L-1 -> mol L-1
+        tmp_alpha = sed_tmp_alpha .* max(tmp_SG, tmp_no) ./ alphaMax;
+        tmp_alpha2 = sed_tmp_alpha2 .* max(tmp2_SG, tmp2_no) ./ alphaMax;
     elseif id == 93 % sum sediment of OP
         tmp_SG =  ncread(his_SG,'sediment_DOP01_01',[1 1 SedLayer i],[Inf Inf 1 1])...
              + ncread(his_SG,'sediment_DOP02_01',[1 1 SedLayer i],[Inf Inf 1 1])...
@@ -1043,36 +1073,50 @@ for i=1:1:imax
         tmp_no = tmp_no ./ 1000000; % umol L-1 -> mol L-1
         tmp2_SG = tmp2_SG ./ 1000000; % umol L-1 -> mol L-1
         tmp2_no = tmp2_no ./ 1000000; % umol L-1 -> mol L-1
+        tmp_alpha = sed_tmp_alpha .* max(tmp_SG, tmp_no) ./ alphaMax;
+        tmp_alpha2 = sed_tmp_alpha2 .* max(tmp2_SG, tmp2_no) ./ alphaMax;
     elseif id == 401 % sum of DOC
         tmp_SG = ncread(his_SG,'DOCTot_01',[1 1 plotZ i],[Inf Inf 1 1]);
         tmp_no = ncread(his_no,'DOCTot_01',[1 1 plotZ i],[Inf Inf 1 1]);
         tmp2_SG = squeeze(ncread(his_SG,'DOCTot_01',[1 transectYindex 1 i],[Inf 1 Inf 1]));
         tmp2_no = squeeze(ncread(his_no,'DOCTot_01',[1 transectYindex 1 i],[Inf 1 Inf 1]));
+        tmp_alpha = max(tmp_SG, tmp_no) ./ alphaMax;
+        tmp_alpha2 = max(tmp2_SG, tmp2_no) ./ alphaMax;
     elseif id == 402 % sum of DON
         tmp_SG = ncread(his_SG,'DONTot_01',[1 1 plotZ i],[Inf Inf 1 1]);
         tmp_no = ncread(his_no,'DONTot_01',[1 1 plotZ i],[Inf Inf 1 1]);
         tmp2_SG = squeeze(ncread(his_SG,'DONTot_01',[1 transectYindex 1 i],[Inf 1 Inf 1]));
         tmp2_no = squeeze(ncread(his_no,'DONTot_01',[1 transectYindex 1 i],[Inf 1 Inf 1]));
+        tmp_alpha = max(tmp_SG, tmp_no) ./ alphaMax;
+        tmp_alpha2 = max(tmp2_SG, tmp2_no) ./ alphaMax;
     elseif id == 403 % sum of DOP
         tmp_SG = ncread(his_SG,'DOPTot_01',[1 1 plotZ i],[Inf Inf 1 1]);
         tmp_no = ncread(his_no,'DOPTot_01',[1 1 plotZ i],[Inf Inf 1 1]);
         tmp2_SG = squeeze(ncread(his_SG,'DOPTot_01',[1 transectYindex 1 i],[Inf 1 Inf 1]));
         tmp2_no = squeeze(ncread(his_no,'DOPTot_01',[1 transectYindex 1 i],[Inf 1 Inf 1]));
+        tmp_alpha = max(tmp_SG, tmp_no) ./ alphaMax;
+        tmp_alpha2 = max(tmp2_SG, tmp2_no) ./ alphaMax;
     elseif id == 404 % sum of POC
         tmp_SG = ncread(his_SG,'POCTot_01',[1 1 plotZ i],[Inf Inf 1 1]);
         tmp_no = ncread(his_no,'POCTot_01',[1 1 plotZ i],[Inf Inf 1 1]);
         tmp2_SG = squeeze(ncread(his_SG,'POCTot_01',[1 transectYindex 1 i],[Inf 1 Inf 1]));
         tmp2_no = squeeze(ncread(his_no,'POCTot_01',[1 transectYindex 1 i],[Inf 1 Inf 1]));
+        tmp_alpha = max(tmp_SG, tmp_no) ./ alphaMax;
+        tmp_alpha2 = max(tmp2_SG, tmp2_no) ./ alphaMax;
     elseif id == 405 % sum of PON
         tmp_SG = ncread(his_SG,'PONTot_01',[1 1 plotZ i],[Inf Inf 1 1]);
         tmp_no = ncread(his_no,'PONTot_01',[1 1 plotZ i],[Inf Inf 1 1]);
         tmp2_SG = squeeze(ncread(his_SG,'PONTot_01',[1 transectYindex 1 i],[Inf 1 Inf 1]));
         tmp2_no = squeeze(ncread(his_no,'PONTot_01',[1 transectYindex 1 i],[Inf 1 Inf 1]));
+        tmp_alpha = max(tmp_SG, tmp_no) ./ alphaMax;
+        tmp_alpha2 = max(tmp2_SG, tmp2_no) ./ alphaMax;
     elseif id == 406 % sum of POP
         tmp_SG = ncread(his_SG,'POPTot_01',[1 1 plotZ i],[Inf Inf 1 1]);
         tmp_no = ncread(his_no,'POPTot_01',[1 1 plotZ i],[Inf Inf 1 1]);
         tmp2_SG = squeeze(ncread(his_SG,'POPTot_01',[1 transectYindex 1 i],[Inf 1 Inf 1]));
         tmp2_no = squeeze(ncread(his_no,'POPTot_01',[1 transectYindex 1 i],[Inf 1 Inf 1]));
+        tmp_alpha = max(tmp_SG, tmp_no) ./ alphaMax;
+        tmp_alpha2 = max(tmp2_SG, tmp2_no) ./ alphaMax;
     % elseif id == 407 % sum of OC
     %     tmp = ncread(his,'DOCTot_01',[1 1 plotZ i],[Inf Inf 1 1])...
     %         + ncread(his,'POCTot_01',[1 1 plotZ i],[Inf Inf 1 1]);
@@ -1099,16 +1143,22 @@ for i=1:1:imax
         tmp_no = ncread(his_no,'PhyCTot_01',[1 1 plotZ i],[Inf Inf 1 1]);
         tmp2_SG = squeeze(ncread(his_SG,'PhyCTot_01',[1 transectYindex 1 i],[Inf 1 Inf 1]));
         tmp2_no = squeeze(ncread(his_no,'PhyCTot_01',[1 transectYindex 1 i],[Inf 1 Inf 1]));
+        tmp_alpha = max(tmp_SG, tmp_no) ./ alphaMax;
+        tmp_alpha2 = max(tmp2_SG, tmp2_no) ./ alphaMax;
     elseif id == 411 % sum of zooplankton
         tmp_SG = ncread(his_SG,'ZooCTot_01',[1 1 plotZ i],[Inf Inf 1 1]);
         tmp_no = ncread(his_no,'ZooCTot_01',[1 1 plotZ i],[Inf Inf 1 1]);
         tmp2_SG = squeeze(ncread(his_SG,'ZooCTot_01',[1 transectYindex 1 i],[Inf 1 Inf 1]));
         tmp2_no = squeeze(ncread(his_no,'ZooCTot_01',[1 transectYindex 1 i],[Inf 1 Inf 1]));
+        tmp_alpha = max(tmp_SG, tmp_no) ./ alphaMax;
+        tmp_alpha2 = max(tmp2_SG, tmp2_no) ./ alphaMax;
     elseif id == 412 % sum of PIC
         tmp_SG = ncread(his_SG,'PICTot_01',[1 1 plotZ i],[Inf Inf 1 1]);
         tmp_no = ncread(his_no,'PICTot_01',[1 1 plotZ i],[Inf Inf 1 1]);
         tmp2_SG = squeeze(ncread(his_SG,'PICTot_01',[1 transectYindex 1 i],[Inf 1 Inf 1]));
         tmp2_no = squeeze(ncread(his_no,'PICTot_01',[1 transectYindex 1 i],[Inf 1 Inf 1]));
+        tmp_alpha = max(tmp_SG, tmp_no) ./ alphaMax;
+        tmp_alpha2 = max(tmp2_SG, tmp2_no) ./ alphaMax;
     % elseif id == 1001
     %     tmp = ncread(his,'Tair',[1 1 i],[Inf Inf 1]);
     % elseif id == 1002
@@ -1121,8 +1171,8 @@ for i=1:1:imax
     %     tmp = ncread(his,'cloud',[1 1 i],[Inf Inf 1]);
     end
 
-    tmp = tmp_no - tmp_SG;
-    tmp2 = tmp2_no - tmp2_SG;
+    tmp = (tmp_no - tmp_SG)./tmp_SG * 100;
+    tmp2 = (tmp2_no - tmp2_SG)./tmp2_SG * 100;
 
     if wet_dry == 1
         wetdry_mask_rho = ncread(his,'wetdry_mask_rho',[1 1 i],[Inf Inf 1]);
@@ -1215,7 +1265,6 @@ for i=1:1:imax
     if 50 < id && id < 100
         set(axes3 ,'Layer', 'Top')
     end
-
 
     drawnow()
 
